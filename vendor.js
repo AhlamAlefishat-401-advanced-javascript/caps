@@ -9,9 +9,9 @@ const faker = require('faker');
 module.exports = function generateFake(){
   let fakeOrder =
    { store: myStoreName,
-     orderId : faker.random.number(),
+     orderID : faker.random.number(),
      customer : faker.name.findName(),
-     address :  faker.address.country() };
+     address :`${faker.address.city()}, ${faker.address.country()}` };
   return fakeOrder;
 };
 

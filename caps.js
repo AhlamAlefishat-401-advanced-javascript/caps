@@ -1,13 +1,26 @@
 const events = require('./events.js');
+require('./driver.js');
+const vendor = require('./vendor.js');
 
-
-events.on('pickup', (payload) => logIt( 'pickup', payload));
-events.on('in-transit',(payload) => logIt('in-transit', payload));
-events.on('delivered',(payload) => logIt('delivered', payload));
-
-function logIt(event, payload){
-  const time = new Date();
-  console.log(`EVENT { Event: ${event},
-  Time: ${time} \n`
-  ,'payload: ',payload);
+function readyForPickup(){
+  setTimeout(() => {
+    let fakeOrder = vendor();
+    
+    setTimeout(() => {
+      events.emit('pickup',fakeOrder); 
+      console.log(`DRIVER: picked up ${fakeOrder.orderID}`);
+      
+    }, 1000);
+    
+    setTimeout(() => {
+      events.emit('in-transit', fakeOrder );
+      console.log(`DRIVER: delivered up ${fakeOrder.orderID}`);
+      console.log(`VENDOR: Thank you for delivering ${fakeOrder.orderID}`); 
+      events.emit('delivered',fakeOrder); 
+    }, 3000),
+    
+    
+    readyForPickup();
+  }, 5000); 
 }
+readyForPickup();
