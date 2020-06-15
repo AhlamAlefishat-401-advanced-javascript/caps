@@ -1,0 +1,29 @@
+{
+  "name": "caps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "caps.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**/*.js'",
+    "start": "node caps.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhlamAlefishat-401-advanced-javascript/caps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhlamAlefishat-401-advanced-javascript/caps/issues"
+  },
+  "homepage": "https://github.com/AhlamAlefishat-401-advanced-javascript/caps#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {  
+    "eslint": "^7.2.0"
+  }
+}
