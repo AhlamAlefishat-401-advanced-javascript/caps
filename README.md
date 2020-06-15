@@ -19,12 +19,12 @@
 
 i.e.
 
-- `STORE`=ahlam's 
+- `STORE`=ahlam 
 
 #### How to initialize/run your application (where applicable)
 
 -  `npm start`
-- `node caps.js`
+- `node driver.js`
 - `nodemon`
 
 #### How to use your library (where applicable)

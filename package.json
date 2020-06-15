@@ -1,10 +1,10 @@
 {
   "name": "caps",
   "version": "1.0.0",
-  "description": "",
-  "main": "caps.js",
+  "description": "## Project: Caps",
+  "main": "driver.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage --verbose",
     "lint": "eslint '**/*.js'",
     "start": "node caps.js"
   },
@@ -21,9 +21,10 @@
   "homepage": "https://github.com/AhlamAlefishat-401-advanced-javascript/caps#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "faker": "^4.1.0"
+    "faker": "^4.1.0",
+    "jest": "^26.0.1"
   },
-  "devDependencies": {  
+  "devDependencies": {
     "eslint": "^7.2.0"
   }
 }
