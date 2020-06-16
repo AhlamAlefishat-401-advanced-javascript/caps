@@ -1,4 +1,4 @@
-const events = require('./events.js');
+const events = require('../events.js');
 
 
 events.on('pickup', (payload) => logIt( 'pickup', payload));
